@@ -1,0 +1,16 @@
+<template>
+	<!-- File Input for uploading the file -->
+    <lightning-card title="Upload File to Amazon S3">
+        <div class="slds-m-around_medium">
+            <!-- File input field -->
+            <lightning-input type="file" label="Choose File" onchange={handleFileChange}>
+            </lightning-input>
+
+            <!-- Placeholder for showing progress -->
+            <template if:true={file}>
+                <p>Uploading file: {file.name}</p>
+                <p>Uploaded: {uploadedSize} of {file.size} bytes</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

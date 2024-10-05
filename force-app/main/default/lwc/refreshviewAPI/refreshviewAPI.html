@@ -1,0 +1,34 @@
+<template>
+  
+  <div class="slds-section slds-is-open">
+      <h3 class="slds-section__title">
+        <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+          <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+          </svg>
+          <span class="slds-truncate" title="Section Title">SLA Information</span>
+        </button>
+      </h3>
+      <div class="slds-section__content" id="expando-unique-id">
+        <!-- Section Body goes here-->
+        <!-- Border Line --><div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+          
+          <lightning-record-form
+              object-api-name={objectApiName}
+              record-id={recordId}
+              fields={fields}
+              onsuccess={handleSuccess}
+          >
+          </lightning-record-form>
+
+          <!-- Border Line -->
+
+        </div>
+
+        
+
+         <!-- Section Body goes here-->
+      </div>
+    </div>
+  
+</template>

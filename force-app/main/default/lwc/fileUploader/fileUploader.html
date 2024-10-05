@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Upload Files">
+        <lightning-file-upload 
+            label="Upload your files" 
+            name="fileUploader"
+            record-id={recordId}
+            multiple={allowMultiple}
+            onuploadfinished={handleUploadFinished}>
+        </lightning-file-upload>
+
+        <template if:true={uploadedFiles}>
+            <h3>Uploaded Files:</h3>
+            <ul>
+                <template for:each={uploadedFiles} for:item="file">
+                    <li key={file.id}>
+                        {file.name}
+                    </li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+</template>

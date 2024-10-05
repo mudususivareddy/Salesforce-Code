@@ -1,0 +1,12 @@
+<template>
+		<lightning-datatable
+        key-field="Id"
+        data={contacts}
+        columns={columns}
+        onloadmore={handleLoadMore}
+        enable-infinite-loading
+												 is-loading={isLoading}
+        load-more-offset="20">
+    </lightning-datatable>
+
+</template>

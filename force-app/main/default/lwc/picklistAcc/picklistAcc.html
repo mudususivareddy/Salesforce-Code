@@ -1,0 +1,14 @@
+<template>
+		<div class="slds-m-around_medium">
+
+    <template if:true={OpportunityPicklist.data}>
+
+        <lightning-combobox name="StageName" label="Stage Name" value={StageValue}
+
+            options={OpportunityPicklist.data.values} onchange={handleChange}>
+
+        </lightning-combobox>
+
+    </template>   
+		</div>
+</template>

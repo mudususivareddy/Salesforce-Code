@@ -1,0 +1,11 @@
+.searchButtonStyle{
+    margin-top: 4px;
+    margin-right: 0px;
+}
+.slds-box{
+    background-color: rgb(0, 255, 183);
+}
+.my-icon {
+    --slds-c-icon-color-foreground-default: white;
+   
+}

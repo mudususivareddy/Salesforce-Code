@@ -1,0 +1,66 @@
+<template>
+    <!-- Button to open the modal -->
+    <lightning-button label="Open Modal" onclick={handleOpenModal}></lightning-button>
+
+    <!-- Modal Popup -->
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup header -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleCloseModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium">Customer Offer Enrollment</h2>
+                </header>
+
+                <!-- Modal/Popup body -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div class="slds-box slds-p-around_large">
+                        <ul class="slds-list_horizontal">
+                            <li>
+                                <lightning-icon icon-name="utility:priority" alternative-text="Flag" title="Flag" class="my-icon"></lightning-icon>
+                            </li>
+                            <li>
+                                <div class="slds-text-heading_medium slds-text-color_inverse slds-p-left_medium">Customer Offer</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="slds-p-horizontal_large">
+                        <h3 class="slds-text-heading_small">Read to the Customer:</h3>
+                    </div>
+                    <br> 
+                    <div class="slds-p-horizontal_large"> 
+                        <ul class="slds-list_horizontal">
+                            <li>
+                                <lightning-icon icon-name="action:script" alternative-text="script" title="script"></lightning-icon>
+                            </li>
+                            <li>
+                                <div class="slds-p-left_medium">Research is "creative and systematic work undertaken to increase the stock of knowledge". It involves the collection, organization, and analysis of evidence.</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="slds-p-horizontal_large">By clicking "confirm", I confirm that I have read the information about the offer</div>
+                    <br>
+                </div>
+
+                <!-- Modal/Popup footer -->
+                <footer class="slds-modal__footer">
+                    <div class="slds-clearfix">
+                        <div class="slds-float_left">
+                            <lightning-button variant="brand" label="Cancel" title="Primary action" onclick={handleCloseModal} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                        <div class="slds-float_right slds-p-right_medium">
+                            <lightning-button variant="brand" label="Confirm" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>
